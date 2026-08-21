@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Club Pádel Sabor — custom styles (built with Tailwind CLI) */
+
+:root {
+  --brand-lime: #a3e635;
+  --brand-sky: #38bdf8;
+  --brand-dark: #0f172a;
+  --brand-card: #1e293b;
+  --header-h: 4.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Figtree", system-ui, sans-serif;
+  background-color: var(--brand-dark);
+  color: #f1f5f9;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: "Syne", system-ui, sans-serif;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--brand-lime);
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Header */
+.site-header {
+  backdrop-filter: blur(14px);
+  background: rgba(15, 23, 42, 0.82);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Language selector */
+.lang-btn {
+  min-width: 2.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.lang-btn:hover {
+  transform: translateY(-1px);
+}
+
+.lang-btn.is-active {
+  background: rgba(163, 230, 53, 0.18);
+  color: var(--brand-lime);
+  box-shadow: inset 0 0 0 1px rgba(163, 230, 53, 0.45);
+}
+
+/* Mobile nav */
+.mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.mobile-nav.is-open {
+  max-height: 28rem;
+}
+
+/* Hero image */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-media .hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.78) 55%, rgba(15, 23, 42, 0.96) 100%),
+    radial-gradient(ellipse at 70% 20%, rgba(56, 189, 248, 0.18), transparent 45%),
+    radial-gradient(ellipse at 20% 80%, rgba(163, 230, 53, 0.14), transparent 40%);
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* Experience cards */
+.experience-card {
+  background: linear-gradient(160deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.9));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(163, 230, 53, 0.35);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Gallery */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  aspect-ratio: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.65), transparent 50%);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 0.4;
+}
+
+/* Modal */
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-panel {
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+}
+
+.modal.is-open .modal-panel {
+  transform: scale(1);
+}
+
+/* Menu tabs & cards */
+.menu-tab.is-active {
+  background: rgba(163, 230, 53, 0.16);
+  color: var(--brand-lime);
+  box-shadow: inset 0 0 0 1px rgba(163, 230, 53, 0.4);
+}
+
+.dish-card {
+  background: linear-gradient(165deg, rgba(30, 41, 59, 0.98), rgba(15, 23, 42, 0.92));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.dish-card:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+.dish-card.is-hidden {
+  display: none;
+}
+
+.dish-card-img {
+  width: 5.5rem;
+  height: 5.5rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  object-fit: cover;
+  background: #0f172a;
+}
+
+@media (min-width: 640px) {
+  .dish-card-img {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+/* Instagram CTA strip */
+.ig-cta {
+  background:
+    linear-gradient(120deg, rgba(163, 230, 53, 0.12), rgba(56, 189, 248, 0.1)),
+    rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.ig-cta:hover {
+  transform: translateY(-2px);
+  border-color: rgba(163, 230, 53, 0.4);
+}
+
+.tag-top {
+  background: rgba(163, 230, 53, 0.15);
+  color: #bef264;
+  border: 1px solid rgba(163, 230, 53, 0.35);
+}
+
+.tag-veggie {
+  background: rgba(34, 197, 94, 0.12);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.tag-recommended {
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Floating WhatsApp */
+.fab-whatsapp {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 60;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fab-whatsapp:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.35);
+}
+
+/* Cookie banner */
+.cookie-banner {
+  transform: translateY(120%);
+  transition: transform 0.35s ease;
+}
+
+.cookie-banner.is-visible {
+  transform: translateY(0);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #a3e635, #84cc16);
+  color: #0f172a;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 28px rgba(163, 230, 53, 0.28);
+}
+
+.btn-secondary {
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(56, 189, 248, 0.2);
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--brand-lime);
+  outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .gallery-item img,
+  .experience-card,
+  .dish-card,
+  .btn-primary,
+  .btn-secondary,
+  .modal,
+  .modal-panel,
+  .mobile-nav {
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
