@@ -6,9 +6,10 @@
 
   var CONFIG = {
     whatsapp: "34600000000",
-    whatsappMessage: "Hola Club Pádel Sabor! Quisiera información / pedir.",
-    instagram: "https://www.instagram.com/",
-    tiktok: "https://www.tiktok.com/",
+    whatsappMessage: "Hola Club Pádel Sabor (Palma)! Quisiera información / pedir.",
+    instagram: "https://www.instagram.com/clubpadelsabor/",
+    instagramHandle: "@clubpadelsabor",
+    tiktok: "https://www.tiktok.com/@clubpadelsabor",
     cookieKey: "cps_cookie_consent"
   };
 
@@ -77,48 +78,9 @@
     }
   }
 
-  /* ---------- Hero video fallback ---------- */
+  /* ---------- Hero (static padel photo) ---------- */
   function initHeroVideo() {
-    var wrap = $("#hero-media");
-    var video = $("#hero-video");
-    if (!wrap || !video) return;
-
-    var failed = false;
-
-    function showFallback() {
-      if (failed) return;
-      failed = true;
-      wrap.classList.add("is-fallback");
-      try {
-        video.pause();
-        video.removeAttribute("src");
-        video.load();
-      } catch (e) {
-        /* ignore */
-      }
-    }
-
-    video.addEventListener("error", showFallback);
-    video.addEventListener("stalled", function () {
-      /* soft signal — wait a bit before falling back */
-      setTimeout(function () {
-        if (video.readyState < 2) showFallback();
-      }, 4000);
-    });
-
-    /* If autoplay is blocked, still try muted play; keep poster/fallback ready */
-    var playPromise = video.play();
-    if (playPromise && typeof playPromise.catch === "function") {
-      playPromise.catch(function () {
-        /* Autoplay blocked — image fallback is fine for UX */
-        if (video.readyState < 2) showFallback();
-      });
-    }
-
-    /* Hard timeout for very slow connections */
-    setTimeout(function () {
-      if (video.readyState < 2) showFallback();
-    }, 8000);
+    /* Hero uses a local padel court photo — no video dependency. */
   }
 
   /* ---------- Reveal on scroll ---------- */
@@ -256,22 +218,31 @@
           .join("");
 
         html +=
-          '<article class="dish-card rounded-2xl p-4 sm:p-5" data-dish-id="' +
+          '<article class="dish-card rounded-2xl p-3 sm:p-4" data-dish-id="' +
           dish.id +
           '">' +
+          '<div class="flex items-start gap-3 sm:gap-4">' +
+          (dish.image
+            ? '<img class="dish-card-img" src="' +
+              dish.image +
+              '" alt="' +
+              name.replace(/"/g, "&quot;") +
+              '" loading="lazy" width="104" height="104" />'
+            : "") +
+          '<div class="min-w-0 flex-1">' +
           '<div class="flex items-start justify-between gap-3">' +
-          "<div>" +
-          '<h3 class="font-display text-lg font-semibold text-white">' +
+          '<h3 class="font-display text-base font-semibold text-white sm:text-lg">' +
           name +
           "</h3>" +
+          '<p class="shrink-0 font-display text-lg font-bold text-lime-400 sm:text-xl">' +
+          formatPrice(dish.price) +
+          "</p>" +
+          "</div>" +
           '<p class="mt-1.5 text-sm leading-relaxed text-slate-400">' +
           desc +
           "</p>" +
           (tagsHtml ? '<div class="mt-3 flex flex-wrap gap-1.5">' + tagsHtml + "</div>" : "") +
           "</div>" +
-          '<p class="shrink-0 font-display text-xl font-bold text-lime-400">' +
-          formatPrice(dish.price) +
-          "</p>" +
           "</div>" +
           "</article>";
       });
@@ -348,13 +319,29 @@
     });
   }
 
-  /* ---------- WhatsApp links ---------- */
+  /* ---------- WhatsApp + Instagram links ---------- */
   function initWhatsAppLinks() {
     $$("[data-whatsapp]").forEach(function (el) {
       var custom = el.getAttribute("data-whatsapp-msg");
       el.setAttribute("href", whatsappUrl(custom || CONFIG.whatsappMessage));
       el.setAttribute("target", "_blank");
       el.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
+  function initSocialLinks() {
+    $$("[data-instagram]").forEach(function (el) {
+      el.setAttribute("href", CONFIG.instagram);
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
+    });
+    $$("[data-tiktok]").forEach(function (el) {
+      el.setAttribute("href", CONFIG.tiktok);
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
+    });
+    $$("[data-instagram-handle]").forEach(function (el) {
+      el.textContent = CONFIG.instagramHandle;
     });
   }
 
@@ -399,6 +386,7 @@
     safe(initMenu);
     safe(initCookies);
     safe(initWhatsAppLinks);
+    safe(initSocialLinks);
     safe(initYear);
     safe(initImageFallback);
   }

@@ -23,10 +23,10 @@ There is no backend, database, or auth. No secrets are required for local browsi
 ### Gotchas
 
 - Language preference and cookie consent live in `localStorage` (`cps_lang`, `cps_cookie_consent`). Clear site storage to re-test the cookie banner.
-- Hero video may fall back to the Unsplash poster/image on slow networks or blocked media (`#hero-media.is-fallback`) — that is intentional.
+- Hero uses a local padel-court photo at `assets/images/hero-padel.jpg` (no video). Instagram CTAs use `CONFIG.instagram` in `js/main.js`.
 - WhatsApp number and social URLs are placeholders in `js/main.js` (`CONFIG`). Update before production demos that message a real phone.
-- Tailwind Play CDN needs `'unsafe-eval'` in CSP (already set in `netlify.toml`).
-- Canonical domain in SEO files is `https://clubpadelsabor.com` — replace when the DonDominio domain is final.
+- Netlify build runs `npm run build:css`. Local: `npm run build:css` then `npm run dev`.
+- Location is **Palma de Mallorca** (Carrer d'Andalusia, Ponent, 07013). Canonical domain placeholder is `https://clubpadelsabor.com`. CSS is built with `npm run build:css` (Tailwind CLI); do not reintroduce the Tailwind CDN.
 - Do not add an SPA catch-all rewrite to `index.html`; this is a multi-page site and unknown routes must serve `404.html`.
 
 ### Standard commands
