@@ -11,7 +11,7 @@
       category: "snacks",
       price: 8.5,
       tags: ["top"],
-      image: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/nachos.jpg",
       name: {
         es: "Nachos Club",
         ca: "Nachos Club",
@@ -30,7 +30,7 @@
       category: "snacks",
       price: 7.9,
       tags: ["recommended"],
-      image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/croquetas.jpg",
       name: {
         es: "Croquetas de jamón",
         ca: "Croquetes de pernil",
@@ -49,7 +49,7 @@
       category: "snacks",
       price: 14.5,
       tags: ["top"],
-      image: "https://images.unsplash.com/photo-1540189549336-e9fb5a1c3a7a?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/tabla.jpg",
       name: {
         es: "Tabla Ibérica",
         ca: "Taula Ibèrica",
@@ -68,7 +68,7 @@
       category: "snacks",
       price: 6.5,
       tags: ["veggie"],
-      image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/patatas.jpg",
       name: {
         es: "Patatas bravas Sabor",
         ca: "Patates braves Sabor",
@@ -87,7 +87,7 @@
       category: "snacks",
       price: 5.5,
       tags: ["veggie"],
-      image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/edamame.jpg",
       name: {
         es: "Edamame con sal marina",
         ca: "Edamame amb sal marina",
@@ -106,7 +106,7 @@
       category: "burgers",
       price: 12.9,
       tags: ["top", "recommended"],
-      image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/smash.jpg",
       name: {
         es: "Smash Burger Doble",
         ca: "Smash Burger Doble",
@@ -125,7 +125,7 @@
       category: "burgers",
       price: 13.5,
       tags: ["top"],
-      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/padel-burger.jpg",
       name: {
         es: "Burger Pista",
         ca: "Burger Pista",
@@ -144,7 +144,7 @@
       category: "burgers",
       price: 12.5,
       tags: ["veggie", "recommended"],
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/veggie-burger.jpg",
       name: {
         es: "Burger Veggie Verde",
         ca: "Burger Veggie Verd",
@@ -163,7 +163,7 @@
       category: "burgers",
       price: 11.5,
       tags: [],
-      image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/bocata-calamares.jpg",
       name: {
         es: "Bocata de calamares",
         ca: "Bocata de calamars",
@@ -182,7 +182,7 @@
       category: "burgers",
       price: 10.9,
       tags: ["recommended"],
-      image: "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/bocata-pollo.jpg",
       name: {
         es: "Bocata pollo crispy",
         ca: "Bocata pollastre crispy",
@@ -201,7 +201,7 @@
       category: "drinks",
       price: 2.2,
       tags: [],
-      image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/agua.jpg",
       name: {
         es: "Agua mineral",
         ca: "Aigua mineral",
@@ -220,7 +220,7 @@
       category: "drinks",
       price: 2.8,
       tags: ["top"],
-      image: "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/cerveza.jpg",
       name: {
         es: "Cerveza de barril",
         ca: "Cervesa de barril",
@@ -239,7 +239,7 @@
       category: "drinks",
       price: 3.5,
       tags: [],
-      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/tinto.jpg",
       name: {
         es: "Tinto de verano",
         ca: "Vi negre d'estiu",
@@ -258,7 +258,7 @@
       category: "drinks",
       price: 5.5,
       tags: ["veggie", "recommended"],
-      image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/mocktail.jpg",
       name: {
         es: "Mocktail Smash",
         ca: "Mocktail Smash",
@@ -277,7 +277,7 @@
       category: "drinks",
       price: 1.8,
       tags: [],
-      image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/cafe.jpg",
       name: {
         es: "Café / Infusión",
         ca: "Cafè / Infusió",
@@ -296,7 +296,7 @@
       category: "desserts",
       price: 5.9,
       tags: ["top"],
-      image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/brownie.jpg",
       name: {
         es: "Brownie con helado",
         ca: "Brownie amb gelat",
@@ -315,7 +315,7 @@
       category: "desserts",
       price: 5.5,
       tags: ["recommended"],
-      image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/tarta.jpg",
       name: {
         es: "Tarta de queso",
         ca: "Pastís de formatge",
@@ -334,7 +334,7 @@
       category: "desserts",
       price: 4.5,
       tags: ["veggie"],
-      image: "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=400&q=75",
+      image: "/assets/images/dishes/fruta.jpg",
       name: {
         es: "Fruta de temporada",
         ca: "Fruita de temporada",
