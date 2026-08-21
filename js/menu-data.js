@@ -11,7 +11,7 @@
       category: "snacks",
       price: 8.5,
       tags: ["top"],
-      image: "/assets/images/dishes/nachos.jpg",
+      image: "/assets/images/dishes/nachos.webp",
       name: {
         es: "Nachos Club",
         ca: "Nachos Club",
@@ -30,7 +30,7 @@
       category: "snacks",
       price: 7.9,
       tags: ["recommended"],
-      image: "/assets/images/dishes/croquetas.jpg",
+      image: "/assets/images/dishes/croquetas.webp",
       name: {
         es: "Croquetas de jamón",
         ca: "Croquetes de pernil",
@@ -49,7 +49,7 @@
       category: "snacks",
       price: 14.5,
       tags: ["top"],
-      image: "/assets/images/dishes/tabla.jpg",
+      image: "/assets/images/dishes/tabla.webp",
       name: {
         es: "Tabla Ibérica",
         ca: "Taula Ibèrica",
@@ -68,7 +68,7 @@
       category: "snacks",
       price: 6.5,
       tags: ["veggie"],
-      image: "/assets/images/dishes/patatas.jpg",
+      image: "/assets/images/dishes/patatas.webp",
       name: {
         es: "Patatas bravas Sabor",
         ca: "Patates braves Sabor",
@@ -87,7 +87,7 @@
       category: "snacks",
       price: 5.5,
       tags: ["veggie"],
-      image: "/assets/images/dishes/edamame.jpg",
+      image: "/assets/images/dishes/edamame.webp",
       name: {
         es: "Edamame con sal marina",
         ca: "Edamame amb sal marina",
@@ -106,7 +106,7 @@
       category: "burgers",
       price: 12.9,
       tags: ["top", "recommended"],
-      image: "/assets/images/dishes/smash.jpg",
+      image: "/assets/images/dishes/smash.webp",
       name: {
         es: "Smash Burger Doble",
         ca: "Smash Burger Doble",
@@ -125,7 +125,7 @@
       category: "burgers",
       price: 13.5,
       tags: ["top"],
-      image: "/assets/images/dishes/padel-burger.jpg",
+      image: "/assets/images/dishes/padel-burger.webp",
       name: {
         es: "Burger Pista",
         ca: "Burger Pista",
@@ -144,7 +144,7 @@
       category: "burgers",
       price: 12.5,
       tags: ["veggie", "recommended"],
-      image: "/assets/images/dishes/veggie-burger.jpg",
+      image: "/assets/images/dishes/veggie-burger.webp",
       name: {
         es: "Burger Veggie Verde",
         ca: "Burger Veggie Verd",
@@ -163,7 +163,7 @@
       category: "burgers",
       price: 11.5,
       tags: [],
-      image: "/assets/images/dishes/bocata-calamares.jpg",
+      image: "/assets/images/dishes/bocata-calamares.webp",
       name: {
         es: "Bocata de calamares",
         ca: "Bocata de calamars",
@@ -182,7 +182,7 @@
       category: "burgers",
       price: 10.9,
       tags: ["recommended"],
-      image: "/assets/images/dishes/bocata-pollo.jpg",
+      image: "/assets/images/dishes/bocata-pollo.webp",
       name: {
         es: "Bocata pollo crispy",
         ca: "Bocata pollastre crispy",
@@ -201,7 +201,7 @@
       category: "drinks",
       price: 2.2,
       tags: [],
-      image: "/assets/images/dishes/agua.jpg",
+      image: "/assets/images/dishes/agua.webp",
       name: {
         es: "Agua mineral",
         ca: "Aigua mineral",
@@ -220,7 +220,7 @@
       category: "drinks",
       price: 2.8,
       tags: ["top"],
-      image: "/assets/images/dishes/cerveza.jpg",
+      image: "/assets/images/dishes/cerveza.webp",
       name: {
         es: "Cerveza de barril",
         ca: "Cervesa de barril",
@@ -239,7 +239,7 @@
       category: "drinks",
       price: 3.5,
       tags: [],
-      image: "/assets/images/dishes/tinto.jpg",
+      image: "/assets/images/dishes/tinto.webp",
       name: {
         es: "Tinto de verano",
         ca: "Vi negre d'estiu",
@@ -258,7 +258,7 @@
       category: "drinks",
       price: 5.5,
       tags: ["veggie", "recommended"],
-      image: "/assets/images/dishes/mocktail.jpg",
+      image: "/assets/images/dishes/mocktail.webp",
       name: {
         es: "Mocktail Smash",
         ca: "Mocktail Smash",
@@ -277,7 +277,7 @@
       category: "drinks",
       price: 1.8,
       tags: [],
-      image: "/assets/images/dishes/cafe.jpg",
+      image: "/assets/images/dishes/cafe.webp",
       name: {
         es: "Café / Infusión",
         ca: "Cafè / Infusió",
@@ -296,7 +296,7 @@
       category: "desserts",
       price: 5.9,
       tags: ["top"],
-      image: "/assets/images/dishes/brownie.jpg",
+      image: "/assets/images/dishes/brownie.webp",
       name: {
         es: "Brownie con helado",
         ca: "Brownie amb gelat",
@@ -315,7 +315,7 @@
       category: "desserts",
       price: 5.5,
       tags: ["recommended"],
-      image: "/assets/images/dishes/tarta.jpg",
+      image: "/assets/images/dishes/tarta.webp",
       name: {
         es: "Tarta de queso",
         ca: "Pastís de formatge",
@@ -334,7 +334,7 @@
       category: "desserts",
       price: 4.5,
       tags: ["veggie"],
-      image: "/assets/images/dishes/fruta.jpg",
+      image: "/assets/images/dishes/fruta.webp",
       name: {
         es: "Fruta de temporada",
         ca: "Fruita de temporada",

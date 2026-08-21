@@ -37,7 +37,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&amp;family=Syne:wght@700;800&amp;display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" as="image" href="/assets/images/hero-padel.webp" type="image/webp" fetchpriority="high" />
 
   <link rel="stylesheet" href="/css/styles.css" />
 
@@ -151,14 +154,18 @@
     <!-- Hero -->
     <section class="relative flex min-h-[100svh] items-end overflow-hidden pb-16 pt-28 sm:items-center sm:pb-24 sm:pt-24">
       <div id="hero-media" class="hero-media">
-        <img
-          class="hero-photo"
-          src="/assets/images/hero-padel.jpg"
-          alt="Pista de pádel del Club Pádel Sabor en Palma de Mallorca"
-          width="1439"
-          height="1039"
-          fetchpriority="high"
-        />
+        <picture>
+          <source srcset="/assets/images/hero-padel.webp" type="image/webp" />
+          <img
+            class="hero-photo"
+            src="/assets/images/hero-padel.jpg"
+            alt="Pista de pádel del Club Pádel Sabor en Palma de Mallorca"
+            width="1600"
+            height="1155"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
         <div class="hero-overlay absolute inset-0"></div>
       </div>
 
@@ -229,23 +236,41 @@
         </div>
 
         <div class="reveal mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
-          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/hero-padel.jpg" data-gallery-alt="Pista de pádel" aria-label="Pista de pádel">
-            <img src="/assets/images/hero-padel.jpg" alt="Pista de pádel" loading="lazy" width="700" height="700" />
+          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/hero-padel.webp" data-gallery-alt="Pista de pádel" aria-label="Pista de pádel">
+            <picture>
+              <source srcset="/assets/images/hero-padel.webp" type="image/webp" />
+              <img src="/assets/images/hero-padel.jpg" alt="Pista de pádel" loading="lazy" decoding="async" width="700" height="700" />
+            </picture>
           </button>
-          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/gallery-padel-1.jpg" data-gallery-alt="Pista panorámica" aria-label="Pista panorámica">
-            <img src="/assets/images/gallery-padel-1.jpg" alt="Pista panorámica" loading="lazy" width="700" height="700" />
+          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/gallery-padel-1.webp" data-gallery-alt="Pista panorámica" aria-label="Pista panorámica">
+            <picture>
+              <source srcset="/assets/images/gallery-padel-1.webp" type="image/webp" />
+              <img src="/assets/images/gallery-padel-1.jpg" alt="Pista panorámica" loading="lazy" decoding="async" width="700" height="700" />
+            </picture>
           </button>
-          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/gallery-padel-2.jpg" data-gallery-alt="Partido de pádel" aria-label="Partido de pádel">
-            <img src="/assets/images/gallery-padel-2.jpg" alt="Partido de pádel" loading="lazy" width="700" height="700" />
+          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/gallery-padel-2.webp" data-gallery-alt="Partido de pádel" aria-label="Partido de pádel">
+            <picture>
+              <source srcset="/assets/images/gallery-padel-2.webp" type="image/webp" />
+              <img src="/assets/images/gallery-padel-2.jpg" alt="Partido de pádel" loading="lazy" decoding="async" width="700" height="700" />
+            </picture>
           </button>
-          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/hero-ball.jpg" data-gallery-alt="Pelota de pádel" aria-label="Pelota de pádel">
-            <img src="/assets/images/hero-ball.jpg" alt="Pelota de pádel" loading="lazy" width="700" height="700" />
+          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/hero-ball.webp" data-gallery-alt="Pelota de pádel" aria-label="Pelota de pádel">
+            <picture>
+              <source srcset="/assets/images/hero-ball.webp" type="image/webp" />
+              <img src="/assets/images/hero-ball.jpg" alt="Pelota de pádel" loading="lazy" decoding="async" width="700" height="700" />
+            </picture>
           </button>
-          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" data-gallery-alt="Smash burger" aria-label="Smash burger">
-            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=700&amp;q=75" alt="Smash burger" loading="lazy" width="700" height="700" />
+          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/dishes/smash.jpg" data-gallery-alt="Smash burger" aria-label="Smash burger">
+            <picture>
+              <source srcset="/assets/images/dishes/smash.webp" type="image/webp" />
+              <img src="/assets/images/dishes/smash.jpg" alt="Smash burger" loading="lazy" decoding="async" width="700" height="700" />
+            </picture>
           </button>
-          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" data-gallery-alt="Nachos del club" aria-label="Nachos del club">
-            <img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&amp;fit=crop&amp;w=700&amp;q=75" alt="Nachos del club" loading="lazy" width="700" height="700" />
+          <button type="button" class="gallery-item rounded-2xl" data-gallery-src="/assets/images/dishes/nachos.jpg" data-gallery-alt="Nachos del club" aria-label="Nachos del club">
+            <picture>
+              <source srcset="/assets/images/dishes/nachos.webp" type="image/webp" />
+              <img src="/assets/images/dishes/nachos.jpg" alt="Nachos del club" loading="lazy" decoding="async" width="700" height="700" />
+            </picture>
           </button>
         </div>
         <div class="reveal mt-8 text-center">
