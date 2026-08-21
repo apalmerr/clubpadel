@@ -1,0 +1,9 @@
+{
+  "name": "club-padel-sabor",
+  "private": true,
+  "description": "Sitio estático Club Pádel Sabor (GitHub + Netlify)",
+  "scripts": {
+    "dev": "npx --yes serve -l 5173 .",
+    "start": "npx --yes serve -l 5173 ."
+  }
+}
