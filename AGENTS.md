@@ -26,6 +26,7 @@ There is no backend, database, or auth. No secrets are required for local browsi
 - Hero uses a local padel-court photo at `assets/images/hero-padel.jpg` (no video). Instagram CTAs use `CONFIG.instagram` in `js/main.js`.
 - WhatsApp number and social URLs are placeholders in `js/main.js` (`CONFIG`). Update before production demos that message a real phone.
 - Netlify build runs `npm run build:css`. Local: `npm run build:css` then `npm run dev`.
+- Prefer WebP under `assets/images/` (JPEG fallbacks exist). Re-optimize with Pillow/`cwebp` if replacing photos; keep hero ≤ ~150KB WebP when possible.
 - Location is **Palma de Mallorca** (Carrer d'Andalusia, Ponent, 07013). Canonical domain placeholder is `https://clubpadelsabor.com`. CSS is built with `npm run build:css` (Tailwind CLI); do not reintroduce the Tailwind CDN.
 - Do not add an SPA catch-all rewrite to `index.html`; this is a multi-page site and unknown routes must serve `404.html`.
 

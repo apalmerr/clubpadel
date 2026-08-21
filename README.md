@@ -43,6 +43,16 @@ O con Python: `python3 -m http.server 5173`
 2. En DonDominio, apunta el dominio con registros que indique Netlify (DNS / CNAME / A).
 3. En Netlify → Domain management, añade el dominio personalizado y activa HTTPS.
 
+## Rendimiento
+
+- CSS compilado y minificado (`npm run build:css`); sin Tailwind CDN.
+- Imágenes locales en **WebP** (+ JPEG de respaldo), hero precargado.
+- Fuentes Google con carga no bloqueante y pesos reducidos.
+- Scripts con `defer`; galería y platos con `loading="lazy"`.
+- Caché larga de assets en Netlify (`netlify.toml`).
+
+Para medir: PageSpeed Insights / Lighthouse sobre el deploy de Netlify.
+
 ## Licencia
 
-Código del proyecto para uso del Club Pádel Sabor. Imágenes/vídeos de terceros bajo sus licencias (Unsplash, Coverr).
+Código del proyecto para uso del Club Pádel Sabor. Imágenes de terceros: Unsplash y Wikimedia Commons (ver `assets/images/ATTRIBUTION.txt`).
